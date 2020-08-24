@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contents="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Social Distance Voilation </title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/booststrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/hs/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <style>
+    .bg-dark{
+        back_ground-color: #42678c!important;
+    }
+    #result{
+        color: #0a1c4ed1;
+    }
+    .c {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+body{
+background-attachment:scroll;
+}
+    
+    </style>
+<body style="background-image:url('https://productled.university/wp-content/uploads/2020/03/Virus.png');">
+    <nav class="navbar navbar-dark bg-warning">
+        <div class="container">
+            <h1 class="navbar-brand" style="background-color:#110869;color:red;text-transform: uppercase;font-size: 50px;display:block"><u><strong><center>Social Distance Violation Detector<center><strong></u></h1>
+            <input type="button" class="c" value="Click here to see the violation stream" style="background-color:red;height:30px;width:auto;color:#0D1B30;font-weight:bold;" onClick="document.getElementById('violate').scrollIntoView();" />
+        </div>
+    </nav>
+    
+    <div class="navbar navbar-dark bg-info">
+        
+        <div class="container">
+            <div class="row" style="color:white;text-decoration:none";>
+               <h3>What is social distancing?</h3>
+               <p style="color:white;"> COVID-19 spreads easily through physical contact from person to person. This is why it is important to reduce the ways people come in close contact with one another. An effective way to do this is to stay home as much as possible and avoid crowded, public places where it is difficult to keep a safe space between people.
+                  Many communities have limits on how many people can attend events and gatherings or enter restaurants and bars. And many schools​ and universities have reduced close contact by providing online learning. When close interaction with others is likely, such as essential trips to the grocery store or gas station, or at a gathering, the CDC recommends wearing a cloth face covering over your mouth and nose and staying at least 6 feet away from others.</p>
+                <h3>Why is it important?</h3>
+                <p style="color:white;">Social distancing in indoor and outdoor spaces is an essential way to slow down the spread of COVID-19. And it's important to keep following social distancing recommendations in your community, whether you're in one of the high-risk groups or not.
+                With limited camp and child care options and people working from home, it may be tempting to let kids gather together. But social distancing only works if we all participate. And slowing down or preventing the spread of the virus will save lives.</p>
+                <div class="col-sm-4">
+                    <div>
+                <img class="c" src= "https://stjude.scene7.com/is/image/stjude/social-distancing-together-6-feet?fit=crop,1&fmt=png-alpha&wid=1200" style="height:300px;width:700px;">
+                   
+                    </div>
+                </div>
+                <div class="col-sm-8 bd">
+                    <h2 style="text-align:center;background-color:#110869;color:#FF0000;font-size:50px;padding:0px;"><u><em>Violation Stream</em></u></h2>
+                    <p style="text-align:center;font-size:15px;color:white;text-decoration:none">All the persons enclosed in red rectangles have violated the social distancing and green ones are completely safe</p>
+                        <img class="c" id="violate" src="{{ url_for('video_feed') }}" style="height:500px;" class="img-rounded" alt="Gesture">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+<body>
+
+</html>
+        
+        
